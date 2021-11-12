@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import url("./app.js");
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Background styling */
+
+.body {
+  /* background-color: #19A2AE; */
+  background-image: url("./images/bg-image.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dogBody {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .top_background {
+  background-image: url("./images/bg-pattern-top.svg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -45%;
+  left: -50%;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.bottom_background {
+  background-image: url("./images/bg-pattern-bottom.svg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: -45%;
+  bottom: -50%;
+  position: absolute;
+  z-index: -1;
+} */
+
+/* Whole Profile Card */
+
+.card {
+  background-color: white;
+  width: 400px;
+  height: 450px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-box-shadow: 13px 10px 29px 6px #000000;
+  box-shadow: 13px 10px 29px 6px #000000;
+}
+
+/* Top Secion */
+
+.top {
+  background-image: url("./images/card-image.jpg");
+  width: 100%;
+  flex: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+
+  z-index: 1;
+}
+
+/* Profile image */
+.image-container {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  border: white 6px solid;
+  background: white;
+  position: absolute;
+  margin: -230px 0 auto;
+  text-align: center;
+  z-index: 10;
+  transition: all ease-in-out 0.2s;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 10;
+  object-fit: cover;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Center Section */
+
+.center {
+  width: 100%;
+  flex: 0.4;
+  display: flex;
+  align-items: centers;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.center .name {
+  font-size: 25px;
+  color: black;
+}
+
+.center .age {
+  font-weight: 400;
+}
+
+.center .age::after {
+  content: ",";
+}
+
+.center .content {
+  line-height: 30px;
+  margin-top: 30px;
+}
+
+.center .content .location {
+  font-size: 15px;
+}
+
+.location {
+  margin-top: -20px;
+}
+
+.light-gray-text {
+  color: #969696;
+}
+
+.center .location {
+  font-size: 18px;
+}
+
+/* Footer Section */
+
+.footer {
+  width: 100%;
+  flex: 0.2;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid #2d3248;
+  z-index: 1;
+  padding: 20px;
+}
+
+.stats-header {
+  font-size: 1.5rem;
+}
+
+.icons {
+  font-size: 40px;
+  color: black;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  transition: all ease 0.3s;
+  font-weight: bolder;
+}
+
+.icons:hover {
+  margin: 0 10px;
+  font-size: 50px;
+  opacity: 0.6;
+}
