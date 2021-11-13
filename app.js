@@ -14,48 +14,63 @@ let dog = {
   },
 };
 
+let clicked = false;
+
 console.log("test");
 
-//Profile Image
-document.getElementById(
-  "profileImg"
-).innerHTML = `<img src="${dog.profileImg}" alt="Steve the Dog" />`;
+//Toggle disguise logic
+const toggleDisguise = () => {
+  if (!clicked) {
+    //Profile Image
+    document.getElementById(
+      "profileImg"
+    ).innerHTML = `<img src="${dog.profileImg}" alt="Steve the Dog" />`;
 
-//Name & Age
-document.getElementById("name").innerHTML = `
-${dog.name} <span class="age light-gray-text">${dog.age}</span>
-`;
+    //Name & Age
+    document.getElementById("name").innerHTML = `
+    ${dog.name} <span class="age light-gray-text">${dog.age}</span>
+    `;
 
-//Location
-document.getElementById("location").innerText = `
+    //Location
+    document.getElementById("location").innerText = `
     ${dog.location}
-`;
+    `;
 
-//Banner Image
-document.getElementById("bannerImg").style.background = `
-    ${dog.bannerImg}
-`;
+    //Banner Image
+    document.getElementById("bannerImg").style.backgroundImage = dog.bannerImg;
 
-//Body background color
-document.body.className = "dogBody";
-document.body.style.backgroundColor = `
+    //Body background color
+    document.body.className = "dogBody";
+    document.body.style.backgroundColor = `
     ${dog.backgroundColor}
 `;
-//item1
-const item1 = (document.getElementById("item1").innerHTML = `
+    //item1
+    const item1 = (document.getElementById("item1").innerHTML = `
     <p class="stats-header">${dog.stats.followers}</p>
     <p class="stat-desc light-gray-text">Followers</p>
 `);
-//itme2
-const item2 = (document.getElementById("item2").innerHTML = `
+    //itme2
+    const item2 = (document.getElementById("item2").innerHTML = `
 <p class="stats-header">${dog.stats.likes}</p>
 <p class="stat-desc light-gray-text">Likes</p>
 `);
-//item3
-const item3 = (document.getElementById("item3").innerHTML = `
+    //item3
+    const item3 = (document.getElementById("item3").innerHTML = `
 <p class="stats-header">${dog.stats.posts}</p>
 <p class="stat-desc light-gray-text">Posts</p>
 `);
+    clicked = true;
+  } else {
+    clicked = false;
+    location.reload();
+  }
+};
+
+//Change Disguise Button
+document.getElementById("disguise-btn").innerHTML = `
+  <h3 class="disguise-message" id="disguise-message">Click here to disguise me as Steve the doggo!</h3>
+  <button onClick="toggleDisguise()">Change Disguise</button>
+`;
 
 /*
     let dog = {

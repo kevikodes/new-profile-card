@@ -71,6 +71,16 @@
   box-shadow: 13px 10px 29px 6px #000000;
 }
 
+/* Disguise Button */
+.disguise-btn {
+  margin-left: 50px;
+}
+.disguise-btn button {
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+}
+
 /* Top Secion */
 
 .top {
@@ -80,7 +90,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: bottom;
-
   z-index: 1;
 }
 
@@ -126,9 +135,18 @@
   z-index: 1;
 }
 
+.disguise-message {
+  color: rgb(0, 8, 255);
+  font-size: 30px;
+  font-weight: bolder;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
 .center .name {
   font-size: 25px;
   color: black;
+  margin-bottom: 20px;
 }
 
 .center .age {
