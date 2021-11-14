@@ -16,9 +16,10 @@
     <div class="top_background"></div>
     <div class="card">
       <div class="top" id="bannerImg"></div>
+
       <!-- Image will go here -->
       <div class="center">
-        <div class="image-container">
+        <div class="image-container" id="image-container">
           <a target="_blank" href="https://github.com/krowens3" id="profileImg">
             <img src="./images/profile-pic.png" alt="Kevin Owens III" />
           </a>
@@ -54,7 +55,12 @@
         </div>
       </div>
     </div>
-    <div class="disguise-btn" id="disguise-btn"></div>
+
+    <div class="btn-container">
+      <button class="btn" id="random-btn">Generate Random</button>
+      <button id="reset-btn" class="btn">Reset</button>
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>

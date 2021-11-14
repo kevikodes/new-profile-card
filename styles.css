@@ -135,12 +135,26 @@
   z-index: 1;
 }
 
-.disguise-message {
-  color: rgb(0, 8, 255);
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  margin-left: 50px;
+  padding: 20px;
   font-size: 30px;
-  font-weight: bolder;
-  max-width: 200px;
-  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  color: red;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
 }
 
 .center .name {
